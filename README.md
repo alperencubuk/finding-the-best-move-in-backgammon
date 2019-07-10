@@ -6,7 +6,7 @@ Solution and Implementation of the problem which described below.
 
 ### Problem:
 
-![Problem](problem.png)
+![Problem](problem.jpg)
 
 ### Requirements:
 
