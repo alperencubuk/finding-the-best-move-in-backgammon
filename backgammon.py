@@ -3,14 +3,14 @@ def find_moves(checkers, dice1, dice2):
     if dice1<1 or dice1>6 or dice2<1 or dice2>6:
         return "ERROR! Please check the inputs."
     if dice1 == dice2:
-        print("WARNING! Only 2 move calculated (Equal dice 4 moves not supported)\n")
+        print("WARNING! Only 2 moves calculated (Equal dices 4 moves not supported)\n")
     
-    ##### Defining Some Neccessary Lists #####
+    ##### Defining Some Necessary Lists ######
     importants = [5, 6, 7, 8, 17, 18, 19, 20]
     lots = []
     result = []
 
-    ######### Initial Score Calculate ########
+    ######## Initial Score Calculation #######
     score1=0
     for k in checkers.keys():
         if checkers[k]==1:
@@ -44,7 +44,7 @@ def find_moves(checkers, dice1, dice2):
                 myCheckers[location2]=1
             myCheckers[key2]-=1
     
-    ######### Final Score Calculate ##########
+    ######## Final Score Calculation #########
             score2=0
             for k in myCheckers.keys():
                 if myCheckers[k]==1:

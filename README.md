@@ -2,7 +2,11 @@
 
 ### Summary:
 
-[Bu PDF'te](problem.pdf) belirtilen problemin implementasyonunu içerir.
+Solution and Implementation of the problem which described below.
+
+### Problem:
+
+![Problem](problem.png)
 
 ### Requirements:
 
