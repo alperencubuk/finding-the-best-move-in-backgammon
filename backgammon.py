@@ -1,7 +1,10 @@
 def find_moves(checkers, dice1, dice2):
     ############# Inputs Control #############
     if dice1<1 or dice1>6 or dice2<1 or dice2>6:
-        return "ERROR! Please check the inputs."
+        return "ERROR! Please check the inputs. (Dices)"
+    for k in checkers.keys():
+        if checkers[k]<0:
+            return "ERROR! Please check the inputs. (Checkers)"
     if dice1 == dice2:
         print("WARNING! Only 2 moves calculated (Equal dices 4 moves not supported)\n")
     
@@ -25,10 +28,14 @@ def find_moves(checkers, dice1, dice2):
 
     ########## Make Possible Moves ###########
     for key1 in checkers.keys():
+        if checkers[key1]<1:
+            continue
         location1 = key1+dice1
         if location1>24:
             break
         for key2 in checkers.keys():
+            if key1==key2 and checkers[key1]==1 or checkers[key2]<1:
+                continue
             location2 = key2+dice2
             if location2>24:
                 break
