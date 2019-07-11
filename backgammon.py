@@ -3,7 +3,7 @@ def find_moves(checkers, dice1, dice2):
     if dice1<1 or dice1>6 or dice2<1 or dice2>6:
         return "ERROR! Please check the inputs. (Dices)"
     for k in checkers.keys():
-        if checkers[k]<0:
+        if checkers[k]<0 or k<1 or k>24:
             return "ERROR! Please check the inputs. (Checkers)"
     if dice1 == dice2:
         print("WARNING! Only 2 moves calculated (Equal dices 4 moves not supported)\n")
